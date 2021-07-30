@@ -233,12 +233,14 @@ function ColumnChecker(styles)
 		};
 if CurGameName() == "techno" then
 		local styleset = "Single4";
+elseif CurGameName() == "gdgf" then
+	local styleset = "5 Frets";
 else
 		local styleset = "Single";
 		if styles ~= "nil" then
 			styleset = styles;
 		end;
-		width = cp[CurGameName()][styleset]*one;
+		width = cstyle:ColumnsPerPlayer()*one;
 end;
 
 		--[ja] オブジェがかぶるので横幅が縮む分の計算
